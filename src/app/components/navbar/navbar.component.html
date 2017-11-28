@@ -3,6 +3,8 @@
     <nav class="float-right">
       <button mat-button><mat-icon>add</mat-icon></button>
     </nav>
-    <h3><button mat-button><mat-icon>dashboard</mat-icon> Boards</button></h3>
+    <h3><button routerLink="/" mat-button routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+      <mat-icon>dashboard</mat-icon> Boards
+    </button></h3>
   </div>
 </mat-toolbar>
