@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <div class="container">
     <nav class="float-right">
-      <button mat-button><mat-icon>add</mat-icon></button>
+      <button mat-button (click)="openCreateBoardDialog()"><mat-icon>add</mat-icon></button>
     </nav>
     <h3><button routerLink="/boards" mat-button routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
       <mat-icon>dashboard</mat-icon> Boards

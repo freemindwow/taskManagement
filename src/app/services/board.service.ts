@@ -2,10 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/Rx';
 
+import { Board } from './../models/board.model';
+
 @Injectable()
 export class BoardService {
+  boards: Board[];
 
-  private _projectUrl :string = 'http://taskmanagementapi.loc/api/v1/projects';
+  private _projectUrl: string = 'http://taskmanagementapi.loc/api/v1/projects';
 
   constructor(private _http: HttpClient) {}
 
@@ -19,6 +22,7 @@ export class BoardService {
 
   save(data) {
     const body = {name: data['name']};
+    this.boards.push(body);
     return this._http.post(this._projectUrl, body);
   }
 

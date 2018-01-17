@@ -1,0 +1,6 @@
+<form #f="ngForm" (ngSubmit)="onAddBoard(f)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Board name" ngModel name="boardName" required>
+  </mat-form-field>
+  <button mat-button class="mat-raised-button mat-primary" type="submit">Add</button>
+</form>

@@ -1,7 +1,7 @@
 <h3>Personal Boards</h3>
 
 <div class="row">
-  <div *ngFor="let board of boardList" class="col-3" >
+  <div *ngFor="let board of boardService.boards" class="col-3" >
     <a routerLink="/board/{{ board.id }}" class="board">{{ board.name }}</a>
   </div>
 </div>

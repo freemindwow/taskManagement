@@ -9,13 +9,11 @@ import { BoardService } from '../../services/board.service';
 })
 export class DashboardComponent implements OnInit {
 
-  public boardList;
-
   constructor(public boardService: BoardService) { }
 
   ngOnInit() {
     this.boardService.getAll().subscribe(res => {
-      this.boardList = res['data'];
+      this.boardService.boards = res['data'];
     });
   }
 
